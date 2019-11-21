@@ -1,0 +1,87 @@
+$font-family: 'Montserrat',
+sans-serif;
+$font-color: rgb(58, 55, 55);
+$form-color: rgb(221, 221, 253, 0.5);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: $font-family;
+}
+
+body {
+    background: rgb(196, 181, 181);
+    height: 100vh;
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 0 20px;
+}
+
+.contact-form {
+    display: flex;
+    max-width: 550px;
+    margin: 0 auto;
+    background: $form-color;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    margin-right: 4%;
+}
+
+.input-fields,
+.msg {
+    width: 48%;
+}
+
+.input-fields .input,
+.msg textarea {
+    margin: 10px 0;
+    background: transparent;
+    border: 0px;
+    border-bottom: 2px solid $font-color;
+    padding: 10px;
+    color: $font-color;
+    width: 100%;
+}
+
+.msg textarea {
+    height: 154px;
+}
+
+.btn {
+    background: transparent;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    color: $font-color;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: 1px solid $font-color;
+}
+
+@media screen and (max-width: 600px) {
+    .contact-form {
+        flex-direction: column;
+    }
+
+    .msg textarea {
+        height: 80px;
+    }
+
+    .input-fields,
+    .msg {
+        width: 100%;
+    }
+}
